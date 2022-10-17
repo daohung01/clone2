@@ -1,0 +1,10 @@
+pipeline {
+    agent any
+    stages { 
+        stage('Build Application') {
+            steps {
+                git branch: 'hung-idg', credentialsId: 'gitclone', url: 'https://bitbucket.devops.vnpt.vn'
+            }
+        }
+    }
+}
